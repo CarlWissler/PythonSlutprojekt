@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yr</title>
+
+    <style>
+        .box {
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+            border: none;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: lightblue;
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <div class="box">
+        <h1>Temperatur: {{ yr_weather.Temperatur }}</h1>
+        <p>Väder: {{ yr_weather.Väder }}</p>
+        <p>Vind: {{ yr_weather.Vind }}</p>
+        <p>Nederbörd: {{ yr_weather.Nederbörd }}</p>
+    </div>
+    <a href="/">
+        <button>Home</button>
+    </a>
+</main>
+
+</body>
+</html>

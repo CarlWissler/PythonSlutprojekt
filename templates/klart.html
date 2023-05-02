@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Klart</title>
+
+    <style>
+
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+        }
+
+        .box {
+            margin-top: 10px;
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+            animation: slide 1s;
+            animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            padding: 5px;
+            border: none;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: lightblue;
+        }
+
+        @Keyframes slide {
+            0% {
+                transform: translateX(500px);
+            scale(0);
+                opacity: 0;
+
+            }
+            100% {
+                transform: translateX(0);
+            scale(1);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+
+<main>
+    <div class="box">
+        <h1>Temperatur: {{ klart_weather.Temperatur }}</h1>
+        <p>Väder: {{ klart_weather.Väder }}</p>
+        <p>Vind: {{ klart_weather.Vind }}</p>
+        <p>Nederbörd: {{ klart_weather.Nederbörd }}</p>
+    </div>
+    <a href="/">
+        <button>Home</button>
+    </a>
+</main>
+</body>
+</html>
