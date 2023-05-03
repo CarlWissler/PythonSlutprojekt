@@ -12,7 +12,7 @@ class Scraper:
     Attributes
     ----------
     url : str
-        Url:en som ska skrapas
+        Url:en som      ska skrapas
     response : requests.models.Response
         Svaret från url:en
     soup : bs4.BeautifulSoup
